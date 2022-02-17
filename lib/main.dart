@@ -20,6 +20,11 @@ class DataBase extends StatefulWidget {
 }
 
 class _DataBaseState extends State<DataBase> {
+
+  _connectDatabase() {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container();
