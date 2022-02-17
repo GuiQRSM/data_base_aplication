@@ -29,6 +29,7 @@ class _DataBaseState extends State<DataBase> {
 
     openDatabase(
       destinationDatabase,
+      version: 1,
     );
 
   }
