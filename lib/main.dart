@@ -24,7 +24,8 @@ class _DataBaseState extends State<DataBase> {
 
   _connectDatabase() async {
 
-    final roadDataBase = await getDatabasesPath();
+    final roadDatabase = await getDatabasesPath();
+    final destinationDatabase = join(roadDatabase, "myApp.db");
 
   }
 
