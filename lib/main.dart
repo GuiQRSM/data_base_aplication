@@ -22,9 +22,9 @@ class DataBase extends StatefulWidget {
 
 class _DataBaseState extends State<DataBase> {
 
-  _connectDatabase() {
+  _connectDatabase() async {
 
-    final roadDataBase = getDatabasesPath();
+    final roadDataBase = await getDatabasesPath();
 
   }
 
