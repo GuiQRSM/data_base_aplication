@@ -27,6 +27,10 @@ class _DataBaseState extends State<DataBase> {
     final roadDatabase = await getDatabasesPath();
     final destinationDatabase = join(roadDatabase, "myApp.db");
 
+    openDatabase(
+
+    );
+
   }
 
   @override
