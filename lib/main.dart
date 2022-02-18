@@ -27,18 +27,23 @@ class _DataBaseState extends State<DataBase> {
     final roadDatabase = await getDatabasesPath();
     final destinationDatabase = join(roadDatabase, "myApp.db");
 
-    openDatabase(
+    var definitiveDatabase = await openDatabase(
       destinationDatabase,
       version: 1,
       onCreate: (db, dbVersa){
-
+        db.execute("CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, age INTEGER)");
       }
     );
+
+    //print("StatusDB: ${definitiveDatabase.isOpen.toString()} ");
 
   }
 
   @override
   Widget build(BuildContext context) {
+
+    _connectDatabase();
+
     return Container();
   }
 }
