@@ -34,6 +34,7 @@ class _DataBaseState extends State<DataBase> {
         db.execute("CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, age INTEGER)");
       }
     );
+    return definitiveDatabase;
 
     //print("StatusDB: ${definitiveDatabase.isOpen.toString()} ");
 
