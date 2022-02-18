@@ -42,7 +42,13 @@ class _DataBaseState extends State<DataBase> {
 
   _saveDatabase() async {
 
-    DataBase receiverConnector = _connectDatabase();
+    Database receiverConnector = await _connectDatabase();
+
+    Map<String, dynamic> valuesTable = {
+
+    };
+
+    receiverConnector.insert("users", valuesTable);
 
   }
 
