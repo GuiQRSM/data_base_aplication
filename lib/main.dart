@@ -45,7 +45,8 @@ class _DataBaseState extends State<DataBase> {
     Database receiverConnector = await _connectDatabase();
 
     Map<String, dynamic> valuesTable = {
-
+      "name":"Guilherme Henrique",
+      "age": 20,
     };
 
     receiverConnector.insert("users", valuesTable);
