@@ -46,17 +46,24 @@ class _DataBaseState extends State<DataBase> {
 
     Map<String, dynamic> valuesTable = {
       "name":"Guilherme Henrique",
-      "age": 20,
+      "age": 20
     };
 
-    receiverConnector.insert("users", valuesTable);
+    int showId = await receiverConnector.insert("users", valuesTable);
+
+    print("Save DataBase Status: ${showId.toString()}");
+
+  }
+
+  _listRecordsDatabase() async {
 
   }
 
   @override
   Widget build(BuildContext context) {
 
-    _connectDatabase();
+    //_connectDatabase();
+    //_saveDatabase();
 
     return Container();
   }
