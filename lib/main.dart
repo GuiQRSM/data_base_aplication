@@ -62,6 +62,13 @@ class _DataBaseState extends State<DataBase> {
     String selectRecordsFromdb = "SELECT * FROM users";
     List listRecords = await receiverConnector.rawQuery(selectRecordsFromdb);
 
+    for(var showUser in listRecords){
+      print("item: ${showUser['id']}\n"
+            "name: ${showUser['name']}\n"
+            "age: ${showUser['age']}"
+      );
+    }
+
   }
 
   @override
@@ -69,6 +76,7 @@ class _DataBaseState extends State<DataBase> {
 
     //_connectDatabase();
     //_saveDatabase();
+    _listRecordsDatabase();
 
     return Container();
   }
