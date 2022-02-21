@@ -60,7 +60,7 @@ class _DataBaseState extends State<DataBase> {
     Database receiverConnector = await _connectDatabase();
 
     String selectRecordsFromdb = "SELECT * FROM users";
-    receiverConnector.rawQuery(selectRecordsFromdb);
+    List listRecords = await receiverConnector.rawQuery(selectRecordsFromdb);
 
   }
 
