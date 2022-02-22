@@ -45,8 +45,8 @@ class _DataBaseState extends State<DataBase> {
     Database receiverConnector = await _connectDatabase();
 
     Map<String, dynamic> valuesTable = {
-      "name":"Guilherme Henrique",
-      "age": 20
+      "name":"Renata Abrantes",
+      "age": 24
     };
 
     int showId = await receiverConnector.insert("users", valuesTable);
@@ -59,7 +59,7 @@ class _DataBaseState extends State<DataBase> {
 
     Database receiverConnector = await _connectDatabase();
 
-    String selectRecordsFromdb = "SELECT * FROM users";
+    String selectRecordsFromdb = "SELECT * FROM users WHERE age BETWEEN 25 AND 59";
     List listRecords = await receiverConnector.rawQuery(selectRecordsFromdb);
 
     for(var showUser in listRecords){
