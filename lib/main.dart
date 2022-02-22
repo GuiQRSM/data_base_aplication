@@ -59,7 +59,7 @@ class _DataBaseState extends State<DataBase> {
 
     Database receiverConnector = await _connectDatabase();
 
-    String selectRecordsFromdb = "SELECT * FROM users WHERE name LIKE 'Renata%' ";
+    String selectRecordsFromdb = "SELECT * FROM users WHERE 1=1 ORDER BY UPPER(name) ASC";
     List listRecords = await receiverConnector.rawQuery(selectRecordsFromdb);
 
     for(var showUser in listRecords){
