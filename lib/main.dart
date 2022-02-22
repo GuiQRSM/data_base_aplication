@@ -59,7 +59,7 @@ class _DataBaseState extends State<DataBase> {
 
     Database receiverConnector = await _connectDatabase();
 
-    String selectRecordsFromdb = "SELECT * FROM users WHERE age BETWEEN 25 AND 59";
+    String selectRecordsFromdb = "SELECT * FROM users WHERE age IN(20,61)";
     List listRecords = await receiverConnector.rawQuery(selectRecordsFromdb);
 
     for(var showUser in listRecords){
