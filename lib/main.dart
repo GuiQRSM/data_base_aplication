@@ -59,7 +59,7 @@ class _DataBaseState extends State<DataBase> {
 
     Database receiverConnector = await _connectDatabase();
 
-    String selectRecordsFromdb = "SELECT * FROM users WHERE 1=1 ORDER BY UPPER(name) ASC";
+    String selectRecordsFromdb = "SELECT * FROM users";
     List listRecords = await receiverConnector.rawQuery(selectRecordsFromdb);
 
     for(var showUser in listRecords){
@@ -82,7 +82,13 @@ class _DataBaseState extends State<DataBase> {
       whereArgs: [id],
     );
 
-
+    for(var runnerQ in userId){
+      print(
+              "item: ${runnerQ['id']}\n"
+              "name: ${runnerQ['name']}\n"
+              "age: ${runnerQ['age']}"
+      );
+    }
 
   }
 
@@ -92,6 +98,7 @@ class _DataBaseState extends State<DataBase> {
     //_connectDatabase();
     //_saveDatabase();
     //_listRecordsDatabase();
+    //
 
     return Container();
   }
