@@ -75,12 +75,14 @@ class _DataBaseState extends State<DataBase> {
 
     Database receiverConnector = await _connectDatabase();
 
-    receiverConnector.query(
+    List userId = await receiverConnector.query(
       "users",
       columns: ["id", "name", "age"],
       where: "id = ?",
       whereArgs: [id],
     );
+
+
 
   }
 
