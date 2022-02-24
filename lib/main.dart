@@ -77,6 +77,7 @@ class _DataBaseState extends State<DataBase> {
 
     receiverConnector.query(
       "users",
+      columns: ["id", "name", "age"],
     );
 
   }
