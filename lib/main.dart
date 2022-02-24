@@ -79,6 +79,7 @@ class _DataBaseState extends State<DataBase> {
       "users",
       columns: ["id", "name", "age"],
       where: "id = ?",
+      whereArgs: [id],
     );
 
   }
