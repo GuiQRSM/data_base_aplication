@@ -99,6 +99,7 @@ class _DataBaseState extends State<DataBase> {
     receiverConnector.delete(
       "users",
       where: "id = ?",
+      whereArgs: [id],
     );
 
   }
