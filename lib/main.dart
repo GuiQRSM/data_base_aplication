@@ -51,7 +51,7 @@ class _DataBaseState extends State<DataBase> {
 
     int showId = await receiverConnector.insert("users", valuesTable);
 
-    print("Save DataBase Status: ${showId.toString()}");
+    //print("Save DataBase Status: ${showId.toString()}");
 
   }
 
@@ -71,12 +71,16 @@ class _DataBaseState extends State<DataBase> {
 
   }
 
+  _listIdOfaRecordDb(int id) async {
+
+  }
+
   @override
   Widget build(BuildContext context) {
 
     //_connectDatabase();
     //_saveDatabase();
-    _listRecordsDatabase();
+    //_listRecordsDatabase();
 
     return Container();
   }
