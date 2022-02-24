@@ -73,6 +73,8 @@ class _DataBaseState extends State<DataBase> {
 
   _listIdOfaRecordDb(int id) async {
 
+    Database receiverConnector = await _connectDatabase();
+
   }
 
   @override
