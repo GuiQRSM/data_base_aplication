@@ -96,11 +96,13 @@ class _DataBaseState extends State<DataBase> {
 
     Database receiverConnector = await _connectDatabase();
 
-    receiverConnector.delete(
+   int recordRemoved = await receiverConnector.delete(
       "users",
       where: "id = ?",
       whereArgs: [id],
     );
+
+   print("Record Reomoved: ${recordRemoved.toString()}");
 
   }
 
