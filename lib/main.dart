@@ -106,6 +106,10 @@ class _DataBaseState extends State<DataBase> {
 
   }
 
+  _updateRecordsDatabase(int id) async {
+
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -113,7 +117,7 @@ class _DataBaseState extends State<DataBase> {
     //_saveDatabase();
     //_listRecordsDatabase();
     //_listIdOfaRecordDb();
-    _deleteRecordsDatabase(6);
+    //_deleteRecordsDatabase(18);
 
     return Container();
   }
