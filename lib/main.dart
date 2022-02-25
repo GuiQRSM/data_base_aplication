@@ -110,6 +110,11 @@ class _DataBaseState extends State<DataBase> {
 
     Database receiverConnector = await _connectDatabase();
 
+    Map<String, dynamic> updateRecords = {
+      "name":"Marcos Aurélio",
+      "age": 19,
+    };
+
     receiverConnector.update(
       "users",
     );
