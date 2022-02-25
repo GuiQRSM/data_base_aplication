@@ -110,7 +110,8 @@ class _DataBaseState extends State<DataBase> {
     //_connectDatabase();
     //_saveDatabase();
     //_listRecordsDatabase();
-    //_listIdOfaRecordDb(1);
+    //_listIdOfaRecordDb();
+    _deleteRecordsDatabase(6);
 
     return Container();
   }
