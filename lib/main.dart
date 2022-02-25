@@ -117,6 +117,8 @@ class _DataBaseState extends State<DataBase> {
 
     receiverConnector.update(
       "users",
+      updateRecords,
+      where: "id = ?"
     );
 
   }
@@ -127,8 +129,10 @@ class _DataBaseState extends State<DataBase> {
     //_connectDatabase();
     //_saveDatabase();
     //_listRecordsDatabase();
-    //_listIdOfaRecordDb();
+    //_updateRecordsDatabase(1);
+    //_listIdOfaRecordDb(3);
     //_deleteRecordsDatabase(18);
+    //_updateRecordsDatabase(1);
 
     return Container();
   }
